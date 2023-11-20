@@ -8,7 +8,7 @@ let person = {
     age : 22,
 };
 let arr = ["apple", "banana", person]
-/*
+
 console.log(arr[2].name)
 
 //array length function
@@ -33,7 +33,7 @@ console.log(arr)
 //shift is used to remove the element at the beginning
 arr.shift()
 console.log(arr)
-*/
+
 // looping an array
 
 //for loop
@@ -52,3 +52,74 @@ const numbers = [1, 2, 3, 4, 5];
 numbers.map((item, index, array) => {
     console.log(item, index, array);
 })
+
+const newNums = numbers.map((item, index, array)=> {
+    return item + 5
+})
+
+console.log(newNums)
+
+//filter() function is used to return only the required elements from an array based on the given condition
+
+const newNumsFilter = numbers.filter((item, index, array)=> {
+    return item > 4
+})
+
+console.log(newNumsFilter)
+
+//reduce()
+
+const sum = numbers.reduce((prev, item)=>{
+    return prev+item
+},0)
+
+console.log(sum);
+
+// every() and some() returns true or false based on the condition
+const some = numbers.some((item, index, array) => {
+    return item > 3
+})
+
+console.log(some)
+
+const every = numbers.every((item, index, array) => {
+    return item > 3
+})
+
+console.log(every)
+
+//spread and rest
+
+const no1 = [1, 2, 3]
+const no2 = [4, 5, 6]
+
+const finalNo =[...no1, ...no2]
+console.log(finalNo);
+
+//more array methods
+//concate
+
+const newArr = no1.concat(no2)
+console.log(newArr);
+
+//slice()
+
+const slice = [0, 1, 2,3, 4,5]
+
+const newSlice = slice.slice(-2);
+console.log(newSlice);
+
+//splice()
+
+const splice = slice.splice(0,3,6);
+console.log(splice);
+console.log(slice)
+
+//fill()
+splice.fill(0)
+console.log(splice)
+
+// findindex()
+const array10 =[10 , 9, 8, 7, 6]
+const index = array10.findIndex((hey)=> hey === 9)
+console.log(index);
