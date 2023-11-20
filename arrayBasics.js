@@ -123,3 +123,20 @@ console.log(splice)
 const array10 =[10 , 9, 8, 7, 6]
 const index = array10.findIndex((hey)=> hey === 9)
 console.log(index);
+
+//flat()
+const number = [1, [ 2, 3], 4]
+console.log(number);
+console.log(number.flat());
+
+//reverse
+const sample = [ 1, 2, 3, 4, 5]
+console.log(sample)
+console.log(sample.reverse())
+
+//sort()
+console.time()
+const unsorted = [ 28, 15, 24, 22, 8]
+console.log(unsorted);
+console.log(unsorted.sort((a, b)=> b - a));
+console.timeEnd()
